@@ -145,7 +145,10 @@
         margin-top: 90px;
     }
    div > .subtitle{
-    font-size: 21px;
+    font-size: 19px;
+   }
+   div > .drop-text{
+    font-size: 33px;
    }
 }
 /* Drop Text */
