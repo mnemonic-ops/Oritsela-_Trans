@@ -291,7 +291,11 @@
                     </div>
                 </div>
 
-                <form id="bookingForm">
+                <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="1b9a3abb-2b8b-4247-b879-f8890cdbf9a2">
+
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
                     <!-- Step 1: Service Type -->
                     <div class="form-step active" data-step="1">
                         <h3 style="margin-bottom: 1.5rem; color:white; background-color:  var(--primary-navy);">Select Your Service</h3>
@@ -707,6 +711,25 @@ setInterval(() => {
             }
             return true;
         }
+        document.getElementById("bookingForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+        alert("Your request has been submitted successfully!");
+    } else {
+        alert("Something went wrong. Please try again.");
+    }
+});
+
 
         function populateReview() {
             const serviceName = selectedService.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
