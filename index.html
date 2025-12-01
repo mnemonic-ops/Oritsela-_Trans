@@ -505,6 +505,13 @@
         </div>
     </footer>
 
+    <div id="popup" class="popup hidden">
+  <div class="popup-content">
+      <h3 id="popup-title"></h3>
+      <p id="popup-message"></p>
+  </div>
+</div>
+
     <script>
 
     let slideIndex = 1;
@@ -711,6 +718,36 @@ setInterval(() => {
             }
             return true;
         }
+        
+
+function showPopup(type, title, message) {
+    const popup = document.getElementById("popup");
+    const popupContent = document.querySelector(".popup-content");
+    const popupTitle = document.getElementById("popup-title");
+    const popupMessage = document.getElementById("popup-message");
+
+    popupContent.className = "popup-content " + type;
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+
+    popup.classList.remove("hidden");
+    popup.classList.add("show");
+
+    // Auto-close after 4 seconds
+    setTimeout(() => {
+        popup.classList.remove("show");
+        setTimeout(() => popup.classList.add("hidden"), 400);
+    }, 4000);
+}
+
+// Use this inside your fetch response area
+if (data.success) {
+    showPopup("success", "Request Sent!", "Your request has been submitted successfully.");
+} else {
+    showPopup("error", "Error!", "Something went wrong. Please try again.");
+}
+
+
         document.getElementById("bookingForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
@@ -802,5 +839,7 @@ setInterval(() => {
             statsObserver.observe(statsSection);
         }
     </script>
+    
+
 </body>
 </html>
