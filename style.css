@@ -1,845 +1,1004 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oritsela Transit Services - Reliable Transport & Logistics Solutions</title>
-<link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <div class="logo-icon">O</div>
-                Oritsela Transit
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#booking">Request Service</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#booking" class="cta-button">Get Started</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-    <div class="slideshow">
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <div class="slide fade active">
-        <img src="./img/trucking-logistics-fleet-management-technology~3.jpg" alt="">
-        <div class="drop-text">
-            Fleet Management <br>
-            <div class="subtitle">Streamlining Fleet Management, <br> with trusted Collaborators</div>
-            <div class="img-btn">Get in Touch</div>
-        </div>
-    </div>
 
-    <div class="slide fade">
-        <img src="./img/automobile upgrade.jpg" alt="">
-        <div class="drop-text">
-            Vehicle Upgrade <br>
-            <div class="subtitle">Revolutionize Your Ride <br> Upgrade to Excellence</div>
-            <div class="img-btn">Upgrade & Prices</div>
-        </div>
-    </div>
 
-    <div class="slide fade">
-        <img src="./img/row-modern-semi-trucks-parking-lot.jpg" alt="">
-        <div class="drop-text">
-            Regional Reliable Rentals <br>
-            <div class="subtitle">Transporting Trust, One Mile at a Time</div>
-            <div class="img-btn">Learn More</div>
-        </div>
-    </div>
+        :root {
+            --primary-navy: #0a1f44;
+            --secondary-navy: #1a3a6e;
+            --accent-gold: #d4af37;
+            --accent-teal: #2dd4bf;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
 
-    <div class="slide fade">
-        <img src="./img/driving licencse.jpg" alt="">
-        <div class="drop-text">
-            Your Driving Masterclass <br>
-            <div class="subtitle">Driving Excellence, Delivering Success</div>
-            <div class="img-btn">Learn From the Best</div>
-        </div>
-    </div>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    <div class="slide fade">
-        <img src="./img/sales of all cars .jpg" alt="">
-        <div class="drop-text">
-            All Terrain Vehicles Sales <br>
-            <div class="subtitle">Exchange Limitation for Limitless Possibilities.</div>
-            <div class="img-btn">Prices</div>
-        </div>
-    </div>
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
 
-    <div class="slide fade">
-        <img src="./img/partnership 1.jpg" alt="">
-        <div class="drop-text">
-            Agencies & Partnership <br>
-            <div class="subtitle">Empowering Mobility Through Strategic Alliances</div>
-            <div class="img-btn">Contact Us</div>
-        </div>
-    </div>
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+        }
 
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
- <div class="dots">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
- </div>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Reliable Transit & Logistics Solutions Across Nigeria</h1>
-            <p class="hero-subtitle">Experience seamless transportation with our modern fleet, real-time tracking, and professional drivers. Your trusted partner for bus rentals, freight logistics, and corporate transport solutions.</p>
-            <div class="hero-buttons">
-                <a href="#booking" class="hero-btn-primary">Request a Service</a>
-                <a href="#contact" class="hero-btn-secondary">Contact Us</a>
-            </div>
-        </div>
-    </section>
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item fade-in">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years of Excellence</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Clients Served</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Modern Fleet Vehicles</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Nationwide Coverage</div>
-            </div>
-        </div>
-    </section>
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-gold));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="section-header">
-            <h2 class="section-title">Why Choose Oritsela?</h2>
-            <p class="section-subtitle">We provide premium transportation and logistics services with cutting-edge technology and professional expertise</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card fade-in">
-                <div class="feature-icon">📍</div>
-                <h3 class="feature-title">Real-Time Tracking</h3>
-                <p class="feature-description">Monitor your shipments and vehicles in real-time with our advanced GPS tracking system for complete peace of mind.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">👨‍✈️</div>
-                <h3 class="feature-title">Professional Drivers</h3>
-                <p class="feature-description">Highly trained and experienced drivers ensure safety and reliability for every journey across Nigeria.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🚐</div>
-                <h3 class="feature-title">Modern Fleet</h3>
-                <p class="feature-description">Well-maintained, comfortable vehicles equipped with modern amenities for passenger comfort and cargo safety.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🎓</div>
-                <h3 class="feature-title">Driver Training</h3>
-                <p class="feature-description">Comprehensive driving school programs to develop skilled, safety-conscious professional drivers.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🏢</div>
-                <h3 class="feature-title">Corporate Solutions</h3>
-                <p class="feature-description">Tailored fleet leasing and management solutions for businesses of all sizes.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">⚡</div>
-                <h3 class="feature-title">24/7 Support</h3>
-                <p class="feature-description">Round-the-clock customer support to assist you with any transportation needs at any time.</p>
-            </div>
-        </div>
-    </section>
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-header">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive transportation and logistics solutions tailored to your needs</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <div class="service-image">🚌</div>
-                <div class="service-content">
-                    <h3 class="service-title">Bus Rental & Passenger Transport</h3>
-                    <p class="service-description">Premium bus rental services for corporate events, tours, and group transportation. Modern, comfortable vehicles with professional drivers.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-image">📦</div>
-                <div class="service-content">
-                    <h3 class="service-title">Freight & Road Logistics</h3>
-                    <p class="service-description">Reliable freight transportation services across Nigeria. Safe, efficient delivery of goods with real-time tracking and insurance coverage.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-image">🚗</div>
-                <div class="service-content">
-                    <h3 class="service-title">Fleet Leasing & Corporate Contracts</h3>
-                    <p class="service-description">Flexible fleet leasing solutions for businesses. Short-term and long-term contracts with full maintenance and support included.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-image">🎓</div>
-                <div class="service-content">
-                    <h3 class="service-title">Driving School & Driver Training</h3>
-                    <p class="service-description">Professional driver training programs. Learn from experienced instructors with modern training vehicles and comprehensive curricula.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-image">🛃</div>
-                <div class="service-content">
-                    <h3 class="service-title">Customs Brokerage</h3>
-                    <p class="service-description">Expert customs clearance services to facilitate smooth import and export operations. Navigate regulations with ease.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-image">🚛</div>
-                <div class="service-content">
-                    <h3 class="service-title">Tow & Recovery Services</h3>
-                    <p class="service-description">24/7 towing and vehicle recovery services. Quick response times and professional handling of your vehicle in emergencies.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-image">⚙️</div>
-                <div class="service-content">
-                    <h3 class="service-title">3rd-Party Fleet Management</h3>
-                    <p class="service-description">Complete fleet management solutions including maintenance scheduling, driver management, and operational optimization.</p>
-                    <a href="#booking" class="service-link">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-image fade-in">🚐</div>
-            <div class="about-content fade-in">
-                <h2>About Oritsela Transit Services</h2>
-                <p>With over a decade of excellence in the transportation and logistics industry, Oritsela Transit Services has established itself as Nigeria's trusted partner for reliable, professional, and innovative transport solutions.</p>
-                <p>Our commitment to safety, punctuality, and customer satisfaction has made us the preferred choice for individuals and corporations across the nation. We combine modern technology with experienced personnel to deliver exceptional service every time.</p>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">✓</div>
-                        <span>Safety First Culture</span>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">✓</div>
-                        <span>Modern Fleet</span>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">✓</div>
-                        <span>Trained Professionals</span>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">✓</div>
-                        <span>24/7 Support</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        .nav-links a:hover {
+            color: var(--accent-teal);
+        }
 
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="booking-container">
-            <div class="section-header">
-                <h2 class="section-title">Request a Service</h2>
-                <p class="section-subtitle">Complete our simple form and we'll get back to you within 24 hours</p>
-            </div>
-            <div class="form-wizard">
-                <div class="wizard-steps">
-                    <div class="step active" data-step="1">
-                        <div class="step-number">1</div>
-                        <div class="step-label">Service Type</div>
-                    </div>
-                    <div class="step" data-step="2">
-                        <div class="step-number">2</div>
-                        <div class="step-label">Your Details</div>
-                    </div>
-                    <div class="step" data-step="3">
-                        <div class="step-number">3</div>
-                        <div class="step-label">Service Details</div>
-                    </div>
-                    <div class="step" data-step="4">
-                        <div class="step-number">4</div>
-                        <div class="step-label">Review</div>
-                    </div>
-                </div>
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent-teal);
+            transition: width 0.3s;
+        }
 
-                <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="1b9a3abb-2b8b-4247-b879-f8890cdbf9a2">
-
-            
-
-                    <!-- Step 1: Service Type -->
-                    <div class="form-step active" data-step="1">
-                        <h3 style="margin-bottom: 1.5rem; color:white; background-color:  var(--primary-navy);">Select Your Service</h3>
-                        <div class="service-options">
-                            <div class="service-option" data-service="bus-rental">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚌</div>
-                                <div style="font-weight: 600;">Bus Rental</div>
-                            </div>
-                            <div class="service-option" data-service="freight">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
-                                <div style="font-weight: 600;">Freight Services</div>
-                            </div>
-                            <div class="service-option" data-service="fleet-leasing">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚗</div>
-                                <div style="font-weight: 600;">Fleet Leasing</div>
-                            </div>
-                            <div class="service-option" data-service="driving-school">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎓</div>
-                                <div style="font-weight: 600;">Driving School</div>
-                            </div>
-                            <div class="service-option" data-service="customs">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛃</div>
-                                <div style="font-weight: 600;">Customs Brokerage</div>
-                            </div>
-                            <div class="service-option" data-service="tow">
-                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚛</div>
-                                <div style="font-weight: 600;">Tow Services</div>
-                            </div>
-                        </div>
-                        <input type="hidden" id="selectedService" name="service" required>
-                    </div>
-
-                    <!-- Step 2: Personal Details -->
-                    <div class="form-step" data-step="2">
-                        <h3 style="margin-bottom: 1.5rem; color: white;">Your Information</h3>
-                        <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name (Optional)</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Service Details -->
-                    <div class="form-step" data-step="3">
-                        <h3 style="margin-bottom: 1.5rem; color: white;">Service Requirements</h3>
-                        <div class="form-group">
-                            <label for="startDate">Start Date *</label>
-                            <input type="date" id="startDate" name="startDate" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="endDate">End Date (if applicable)</label>
-                            <input type="date" id="endDate" name="endDate">
-                        </div>
-                        <div class="form-group">
-                            <label for="pickup">Pickup Location *</label>
-                            <input type="text" id="pickup" name="pickup" placeholder="Enter pickup address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="destination">Destination *</label>
-                            <input type="text" id="destination" name="destination" placeholder="Enter destination address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="details">Additional Details</label>
-                            <textarea id="details" name="details" rows="4" placeholder="Tell us more about your requirements..."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Review -->
-                    <div class="form-step" data-step="4">
-                        <h3 style="margin-bottom: 1.5rem; color: white;">Review Your Request</h3>
-                        <div id="reviewContent" style="background: var(--bg-light); padding: 2rem; border-radius: 12px; line-height: 2;">
-                            <!-- Review content will be inserted here -->
-                        </div>
-                    </div>
-
-                    <div class="form-buttons">
-                        <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">Previous</button>
-                        <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
-                        <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">Submit Request</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="section-header" style="text-align: left;">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle" style="margin: 0;">We're here to help 24/7. Reach out through any of these channels.</p>
-                </div>
-                
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-details">
-                        <h3>Visit Our Office</h3>
-                        <p>1 Office Depot Street<br>Eti-Osa, Lagos island<br>Nigeria</p>
-                    </div>
-                </div>
-
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-details">
-                        <h3>Email Us</h3>
-                        <p>info@oritsela.com<br>support@oritsela.com</p>
-                    </div>
-                </div>
-
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-details">
-                        <h3>Call Us</h3>
-                        <p>+234 903 168 7226<br>+234 803 535 0430</p>
-                    </div>
-                </div>
-
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">💬</div>
-                    <div class="contact-details">
-                        <h3>WhatsApp</h3>
-                        <p>Chat with us instantly<br>+234 803 535 0430</p>
-                    </div>
-                </div>
-
-                <div class="support-badge fade-in">
-                    ⚡ 24/7 Customer Support Available
-                </div>
-            </div>
-
-            <div class="contact-form fade-in">
-                <h3 style="margin-bottom: 1.5rem; color: var(--primary-navy);">Send Us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="contactName">Name *</label>
-                        <input type="text" id="contactName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail">Email *</label>
-                        <input type="email" id="contactEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactSubject">Subject *</label>
-                        <input type="text" id="contactSubject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactMessage">Message *</label>
-                        <textarea id="contactMessage" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Oritsela Transit</h3>
-                <p style="opacity: 0.8; line-height: 1.8;">Your trusted partner for reliable transportation and logistics solutions across Nigeria. Excellence in service since 2013.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#booking">Request Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#services">Bus Rental</a></li>
-                    <li><a href="#services">Freight Services</a></li>
-                    <li><a href="#services">Fleet Leasing</a></li>
-                    <li><a href="#services">Driving School</a></li>
-                    <li><a href="#services">Customs Brokerage</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul>
-                    <li>Office Depot Street</li>
-                    <li>Eti-Osa, Lagos, Nigeria</li>
-                    <li><a href="mailto:info@oritsela.com">info@oritsela.com</a></li>
-                    <li><a href="tel:+2341234567890">+234 (0) 123 456 7890</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Oritsela Transit Services. All rights reserved. | Privacy Policy | Terms of Service</p>
-        </div>
-    </footer>
-
-    <div id="popup" class="popup hidden">
-  <div class="popup-content">
-      <h3 id="popup-title"></h3>
-      <p id="popup-message"></p>
-  </div>
-</div>
-
-    <script>
-
-    let slideIndex = 1;
-showSlide(slideIndex);
-
-function changeSlide(n) {
-  showSlide(slideIndex += n);
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
-function currentSlide(n) {
-  showSlide(slideIndex = n);
+.slideshow {
+  height: auto;
 }
 
-function showSlide(n) {
-  let slides = document.querySelectorAll(".slide");
-  let dots = document.querySelectorAll(".dot");
+.slide {
+  display: none;
+  position: relative;
+}
 
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
+.slide.active {
+  display: block;
+}
 
-  // Hide all slides + remove active class
-  slides.forEach(slide => {
-    slide.style.display = "none";
-    slide.classList.remove("active");
-  });
+.slide img {
+  width: 100%;
+  height: 1000px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+@media(max-width:600px){
+    .slide img{
+        height: 280px;
+        object-fit: cover;
+    }
+    
+}
+@media(max-width:600px) {
+    .slideshow{
+        margin-top: 90px;
+    }
+   div > .subtitle{
+    font-size: 19px;
+   }
+   div > .drop-text{
+    font-size: 33px;
+   }
+}
+/* Drop Text */
+.drop-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  text-align: center;
+  width: 80%;
+  font-size: 55px;
+  font-weight: bold;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
 
-  // Remove dot active
-  dots.forEach(dot => dot.classList.remove("active"));
+.slide.active .drop-text {
+  animation: dropDown 1.2s ease forwards;
+}
 
-  // Show the correct slide
-  let current = slides[slideIndex - 1];
-  current.style.display = "block";
-  current.classList.add("active"); // THIS TRIGGERS animation
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    top: 10%;
+  }
+  100% {
+    opacity: 1;
+    top: 40%;
+  }
+}
+ .subtitle{
+    font-weight: lighter;
+    font-size: 31px;
+ }
+/* Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  border-radius: 3px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
 
-  // Activate the correct dot
-  if (dots[slideIndex - 1]) {
-    dots[slideIndex - 1].classList.add("active");
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Image Button */
+.img-btn {
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px 25px;
+  background-color: #02864ffd;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  width: auto;
+  font-size: clamp(14px, 2vw, 20px);
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Phone Fix */
+@media (max-width: 768px) {
+  .drop-text {
+    top: 45%;
+    font-size: clamp(18px, 5vw, 40px);
+    width: 90%;
   }
 
-  // Restart drop-text animation
-  restartDropTextAnimation(current);
+  .img-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 }
 
-function restartDropTextAnimation(activeSlide) {
-  let dropText = activeSlide.querySelector(".drop-text");
-  if (!dropText) return;
-
-  dropText.style.animation = "none";
-  dropText.offsetHeight; // forces browser to reset animation
-  dropText.style.animation = null;
+.active {
+  background: #333;
 }
 
-
-/* AUTO PLAY */
-setInterval(() => {
-  changeSlide(1);
-}, 4000); // change every 4 seconds
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Sticky Navbar
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Fade-in Animation on Scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Booking Form Wizard
-        let currentStep = 1;
-        const totalSteps = 4;
-        let selectedService = '';
-
-        const nextBtn = document.getElementById('nextBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        const submitBtn = document.getElementById('submitBtn');
-
-        // Service Selection
-        document.querySelectorAll('.service-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('.service-option').forEach(opt => {
-                    opt.classList.remove('selected');
-                });
-                this.classList.add('selected');
-                selectedService = this.dataset.service;
-                document.getElementById('selectedService').value = selectedService;
-            });
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (validateStep(currentStep)) {
-                if (currentStep < totalSteps) {
-                    currentStep++;
-                    updateFormStep();
-                }
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (currentStep > 1) {
-                currentStep--;
-                updateFormStep();
-            }
-        });
-
-        function updateFormStep() {
-            // Update step indicators
-            document.querySelectorAll('.step').forEach((step, index) => {
-                step.classList.remove('active', 'completed');
-                if (index + 1 < currentStep) {
-                    step.classList.add('completed');
-                } else if (index + 1 === currentStep) {
-                    step.classList.add('active');
-                }
-            });
-
-            // Update form steps
-            document.querySelectorAll('.form-step').forEach((step, index) => {
-                step.classList.remove('active');
-                if (index + 1 === currentStep) {
-                    step.classList.add('active');
-                }
-            });
-
-            // Update buttons
-            prevBtn.style.display = currentStep === 1 ? 'none' : 'block';
-            nextBtn.style.display = currentStep === totalSteps ? 'none' : 'block';
-            submitBtn.style.display = currentStep === totalSteps ? 'block' : 'none';
-
-            // Populate review step
-            if (currentStep === 4) {
-                populateReview();
-            }
+        .cta-button {
+            background: linear-gradient(135deg, var(--accent-teal), #14b8a6);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow);
         }
 
-        function validateStep(step) {
-            if (step === 1) {
-                if (!selectedService) {
-                    alert('Please select a service');
-                    return false;
-                }
-            } else if (step === 2) {
-                const name = document.getElementById('fullName').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                if (!name || !email || !phone) {
-                    alert('Please fill in all required fields');
-                    return false;
-                }
-            } else if (step === 3) {
-                const startDate = document.getElementById('startDate').value;
-                const pickup = document.getElementById('pickup').value;
-                const destination = document.getElementById('destination').value;
-                if (!startDate || !pickup || !destination) {
-                    alert('Please fill in all required fields');
-                    return false;
-                }
-            }
-            return true;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-navy);
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 10px;
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(10, 31, 68, 0.95), rgba(26, 58, 110, 0.9)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230a1f44" width="1200" height="600"/><path fill="%231a3a6e" d="M0 300L100 280L200 320L300 290L400 310L500 280L600 300L700 320L800 290L900 310L1000 280L1100 300L1200 320V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+              transform: translateY(-50px);
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
         
+            color: white;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
 
-function showPopup(type, title, message) {
-    const popup = document.getElementById("popup");
-    const popupContent = document.querySelector(".popup-content");
-    const popupTitle = document.getElementById("popup-title");
-    const popupMessage = document.getElementById("popup-message");
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(25px);
+            }
+        }
 
-    popupContent.className = "popup-content " + type;
-    popupTitle.textContent = title;
-    popupMessage.textContent = message;
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
 
-    popup.classList.remove("hidden");
-    popup.classList.add("show");
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+        }
 
-    // Auto-close after 4 seconds
-    setTimeout(() => {
-        popup.classList.remove("show");
-        setTimeout(() => popup.classList.add("hidden"), 400);
-    }, 4000);
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn-primary {
+            background: var(--accent-teal);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px -12px rgba(45, 212, 191, 0.5);
+        }
+
+        .hero-btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .hero-btn-secondary:hover {
+            background: white;
+            color: var(--primary-navy);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--primary-navy);
+            padding: 3rem 2rem;
+            margin-top: -80px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-gold));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-link {
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .service-link:hover {
+            gap: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .highlight-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        /* Booking Form */
+        .booking {
+          
+            background: white;
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+             padding: 5rem 2rem;
+        }
+
+        .form-wizard {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .wizard-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+            background-color: grey;
+            
+        }
+
+        .wizard-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e5e7eb;
+            z-index: 0;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            background-color:#d1d5db;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .step.active .step-number {
+            background: var(--accent-teal);
+            color: white;
+        }
+
+        .step.completed .step-number {
+            background: var(--primary-navy);
+            color: white;
+            
+        }
+
+        .step-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+             
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+        }
+
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+            background-color: var(--primary-navy);
+            color: white;
+        }
+
+        .service-option {
+            padding: 2rem 2rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .service-option:hover {
+            color: #000;
+            border-color: var(--accent-teal);
+            background: #f0fdfa;
+           
+        }
+
+        .service-option.selected {
+            border-color: var(--accent-teal);
+            background: #ccfbf1;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--accent-teal);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #14b8a6;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e5e7eb;
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-gold));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+        }
+
+        .support-badge {
+            background: linear-gradient(135deg, var(--accent-teal), #14b8a6);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-navy);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                transition: left 0.3s;
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
 }
 
-// Use this inside your fetch response area
-if (data.success) {
-    showPopup("success", "Request Sent!", "Your request has been submitted successfully.");
-} else {
-    showPopup("error", "Error!", "Something went wrong. Please try again.");
+.popup.show {
+    opacity: 1;
+    pointer-events: all;
 }
 
+.popup-content {
+    background: white;
+    padding: 2rem;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    animation: popupSlide 0.5s ease;
+}
 
-        document.getElementById("bookingForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-    });
-
-    const data = await res.json();
-
-    if (data.success) {
-        alert("Your request has been submitted successfully!");
-    } else {
-        alert("Something went wrong. Please try again.");
+@keyframes popupSlide {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
     }
-});
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
+.popup-content.success {
+    border-left: 6px solid #28a745;
+}
 
-        function populateReview() {
-            const serviceName = selectedService.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
-            const reviewHTML = `
-                <p><strong>Service:</strong> ${serviceName}</p>
-                <p><strong>Name:</strong> ${document.getElementById('fullName').value}</p>
-                <p><strong>Email:</strong> ${document.getElementById('email').value}</p>
-                <p><strong>Phone:</strong> ${document.getElementById('phone').value}</p>
-                <p><strong>Company:</strong> ${document.getElementById('company').value || 'N/A'}</p>
-                <p><strong>Start Date:</strong> ${document.getElementById('startDate').value}</p>
-                <p><strong>End Date:</strong> ${document.getElementById('endDate').value || 'N/A'}</p>
-                <p><strong>Pickup:</strong> ${document.getElementById('pickup').value}</p>
-                <p><strong>Destination:</strong> ${document.getElementById('destination').value}</p>
-                <p><strong>Details:</strong> ${document.getElementById('details').value || 'N/A'}</p>
-            `;
-            document.getElementById('reviewContent').innerHTML = reviewHTML;
-        }
+.popup-content.error {
+    border-left: 6px solid #dc3545;
+}
 
-        // Form Submissions
-        document.getElementById('bookingForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your request! We will contact you within 24 hours.');
-            document.getElementById('bookingForm').reset();
-            currentStep = 1;
-            updateFormStep();
-            selectedService = '';
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will respond shortly.');
-            document.getElementById('contactForm').reset();
-        });
-
-        // Counter Animation for Stats
-        function animateCounter(element, target, duration = 2000) {
-            const start = 0;
-            const increment = target / (duration / 16);
-            let current = start;
-
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target + '+';
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current) + '+';
-                }
-            }, 16);
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                    entry.target.classList.add('counted');
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const target = parseInt(stat.textContent);
-                        if (!isNaN(target)) {
-                            animateCounter(stat, target);
-                        }
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const statsSection = document.querySelector('.stats');
-        if (statsSection) {
-            statsObserver.observe(statsSection);
-        }
-    </script>
-    
-
-</body>
-</html>
+.hidden {
+    display: none;
+}
